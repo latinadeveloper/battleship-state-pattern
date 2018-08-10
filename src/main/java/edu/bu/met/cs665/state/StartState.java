@@ -15,6 +15,7 @@ public class StartState extends BlockState {
     public void addShip() {
         this.positionBlock.setState(positionBlock.getShipNotFiredState());
     }
+    public boolean canAddShip() { return true; }
 
     public void startGame() {
         this.positionBlock.setState(positionBlock.getWaterNotFiredState());

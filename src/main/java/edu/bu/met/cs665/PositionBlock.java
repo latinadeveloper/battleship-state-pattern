@@ -28,6 +28,10 @@ public class PositionBlock {
         state.addShip();
     }
 
+    public boolean canAddShip() {
+        return state.canAddShip();
+    }
+
     public void startGame() {
         state.startGame();
     }

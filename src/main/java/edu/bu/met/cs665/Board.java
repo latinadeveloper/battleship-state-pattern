@@ -1,7 +1,6 @@
 package edu.bu.met.cs665;
 
 import java.util.ArrayList;
-import edu.bu.met.cs665.state.*;
 
 public class Board {
     String player;
@@ -85,7 +84,7 @@ public class Board {
     // random again
     public boolean canAddShip(Ship ship, int n, int m, boolean direction) {
         for(int l = 0; l < ship.getSize(); l++) {
-            if (!(positionBlocks[n][m].getState() instanceof StartState)) {
+            if (!(positionBlocks[n][m].canAddShip())) {
                 return false;
             }
             if (direction) {
