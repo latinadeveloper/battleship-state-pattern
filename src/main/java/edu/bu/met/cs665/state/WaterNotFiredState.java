@@ -6,10 +6,8 @@ import edu.bu.met.cs665.PositionBlock;
  * @author isis
  */
 public class WaterNotFiredState extends BlockState {
-    private PositionBlock positionBlock;
-
     public WaterNotFiredState(PositionBlock positionBlock) {
-        this.positionBlock = positionBlock;
+        super(positionBlock);
     }
 
     public void addShip() {
