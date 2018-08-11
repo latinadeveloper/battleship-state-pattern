@@ -5,6 +5,12 @@ import java.util.Scanner;
 // Game class introduced to conver some procedures in Main to an Object with extracting methods from larger proceedure
 
 public class Game {
+    private static Game singleGame = new Game(5, 5, 3);
+    
+    public static Game getGame() {
+        return singleGame;
+    }
+    
     Board player1Board;
     Board player2Board;
 
@@ -26,12 +32,12 @@ public class Game {
     }
 
     // https://stackoverflow.com/questions/2979383/java-clear-the-console
-    public static void clearScreen() {
+    private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
-    public int askLetter(int max) {
+    private int askLetter(int max) {
         Scanner reading = new Scanner(System.in);
 
         while (true) {
@@ -44,7 +50,7 @@ public class Game {
         }
     }
 
-    public int askNumber(int max) {
+    private int askNumber(int max) {
         Scanner reading = new Scanner(System.in);
 
         while (true) {
@@ -57,7 +63,7 @@ public class Game {
         }
     }
 
-    public void playAgainstBoard(Board opponentBoard) {
+    private void playAgainstBoard(Board opponentBoard) {
         opponentBoard.printBoard(false);
 
         int row = askLetter(m);

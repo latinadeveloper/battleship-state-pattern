@@ -9,12 +9,7 @@ public class Main {
    * @param args not used 
    */
   public static void main(String[] args) throws java.io.IOException {
-    int n = 5;
-    int m = 5;
-    int ships = 3;
-
-    Game game = new Game(n, m, ships);
-
+    Game game = Game.getGame();
     game.play();
   }
 
