@@ -17,7 +17,7 @@ public class Game {
     int n;
     int m;
 
-    public Game(int n, int m, int ships) {
+    private Game(int n, int m, int ships) {
         this.n = n;
         this.m = m;
 
